@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100dvh;
+  margin: 0;
+}
+
+.navbarlink {
+    @apply text-2xl font-medium
+}
+
+@layer utilities{
+    .input-field{
+        @apply h-12 pl-4 rounded-xl bg-field text-white placeholder:text-gray-300 text-lg font-[var(--font-host-sans)]
+    }
+
+    .input-label{
+        @apply text-left text-secondary font-semibold
+    }
+
+    .navbarlink{
+      @apply bg-white p-3 flex items-center gap-2 text-secondary mx-6 rounded-lg text-2xl font-semibold justify-start font-inter hover:bg-background
+    }
+
+    .label-input{
+      @apply text-lg font-medium text-gray-700 mb-2
+    }
+}
